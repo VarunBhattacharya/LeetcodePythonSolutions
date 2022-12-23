@@ -20,7 +20,7 @@ class Solution:
         return right
         '''
 
-        #Better Solution - Newton Method - O(logN) solution
+        #Better Solution - Newton Rhapson Method - O(logN) solution
         res = x
         while not res * res - x < 1:
             res = (res + x / res)/2
