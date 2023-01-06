@@ -10,10 +10,7 @@ class Solution:
         if newStr == newStr[::-1]: return True
         else: return False
         '''
-        
-        '''
         #Approach - 2
-        '''
         def alNum(c):
             return (ord('A') <= ord(c) <= ord('Z') or 
                     ord('a') <= ord(c) <= ord('z') or

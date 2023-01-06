@@ -27,4 +27,4 @@ class Solution:
 
 if __name__ == "__main__":
     obj = Solution()
-    print(obj.hammingWeight(00000000000000000000000000001011))
+    print(obj.hammingWeight('00000000000000000000000000001011'))
