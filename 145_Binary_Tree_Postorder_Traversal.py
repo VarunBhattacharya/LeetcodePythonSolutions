@@ -13,8 +13,8 @@ class Solution:
             if not root:
                 return
             else:
-                postOrder(root.right)
                 postOrder(root.left)
+                postOrder(root.right)
                 res.append(root.val)
         postOrder(root)
         return res
