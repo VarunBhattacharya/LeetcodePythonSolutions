@@ -7,7 +7,7 @@ class TreeNode:
 
 class Solution:
     def zigzagLevelOrder(self, root):
-        #Approach 1 - BFS Algorithm - Time COmplexity - O(2*height) and Space Complexity - O(N)
+        #Approach 1 - BFS Algorithm - Time Complexity - O(2*height) and Space Complexity - O(N)
         '''
         if not root:
             return
