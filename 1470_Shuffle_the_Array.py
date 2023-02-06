@@ -10,7 +10,6 @@ Output: [2,3,5,4,1,7]
 class Solution:
     def shuffle(self, nums, n: int):
         #Approach 1 - Two Pointer Method - Time Complexity - O(N) and Space Complexity - O(N)
-        '''
         res = []
         i = 0
         j = n
@@ -19,7 +18,6 @@ class Solution:
             res.append(nums[j])
             j += 1
         return res
-        '''
 
         #Approach 2 - List Comprehension - Time Complexity - O(N) and Space Complexity - O(N)
         '''
