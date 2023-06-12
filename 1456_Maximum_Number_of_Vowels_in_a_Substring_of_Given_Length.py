@@ -45,6 +45,7 @@ class Solution:
         '''
 
         #Approach 2: Sliding Window - Time Complexity: O(N), Space Complexity: O(1)
+        '''
         vowels = ['a', 'e', 'i', 'o', 'u']
 
         if len(s) == 0 or len(s) < k:
@@ -62,6 +63,27 @@ class Solution:
                 if s[pnt1] in vowels:
                     tempCnt -= 1
                 pnt1 += 1
+            pnt2 += 1
+        return maxCnt
+        '''
+
+        #Approach 3: Time Complexity - O(N) and Space Complexity - O(1)
+        vowels = 'aeiou'
+        s = list(s)
+        pnt1, pnt2, cnt = 0, k, 0
+        for i in range(pnt1, pnt2):
+            if s[i] in vowels:
+                cnt += 1
+        
+        maxCnt = cnt
+
+        while pnt2 < len(s) and pnt1 < pnt2:
+            if s[pnt1] in vowels:
+                cnt -= 1
+            if s[pnt2] in vowels:
+                cnt += 1
+            maxCnt = max(cnt, maxCnt)
+            pnt1 += 1
             pnt2 += 1
         return maxCnt
 
