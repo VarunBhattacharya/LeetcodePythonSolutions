@@ -8,6 +8,7 @@ class TreeNode:
 class Solution:
     def isValidBST(self, root) -> bool:
         #Approach 1: Time Complexity - O(Height) and Space Complexity - O(1)
+        '''
         def checkValidBST(root, left, right):
             if not root:
                 return True
@@ -17,6 +18,20 @@ class Solution:
                     checkValidBST(root.left, left, root.val))
         
         return checkValidBST(root, float("-inf"), float("inf"))
+        '''
+
+        #Approach 2: Time Complexity - O(Height) and Space Complexity - O(1)
+        res = []
+        def inorder(root):
+            if not root:
+                return
+            else:
+                inorder(root.left)
+                res.append(root.val)
+                inorder(root.right)
+
+        inorder(root)
+        return res == list(sorted(set(res)))
 
 if __name__ == "__main__":
     root = TreeNode(5)
